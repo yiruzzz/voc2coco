@@ -125,7 +125,7 @@ if __name__ == '__main__':
     xml_list = np.sort(xml_list)
     np.random.seed(100)
     np.random.shuffle(xml_list)
-    xml_list = xml_list[:2600]
+    xml_list = xml_list[:2600] # 选择前2600张图片
 
     train_num = int(len(xml_list)*train_ratio)
     train_val_num = int(len(xml_list)*train_val_ratio)
