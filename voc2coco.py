@@ -11,7 +11,7 @@ import xml.etree.ElementTree as ET
  
  
  
-xml_folder = "/data/ylz/DATA/detection/MY_VOC_dataset/OPTIMAL_Z_FINAL"
+xml_folder = "/MY_VOC_dataset/dataset"
  
 # BBox id是从1开始的
 START_BOUNDING_BOX_ID = 1
@@ -155,7 +155,7 @@ if __name__ == '__main__':
     convert(xml_list_val, save_json_val)
     convert(xml_list_test, save_json_test)
  
-    img_path = '/data/ylz/DATA/detection/HRRSD-COCO/Imgs/'
+    img_path = '/detection/dataset/Imgs/'
     
     f1 = open("train.txt", "w")
     for xml in xml_list_train:
