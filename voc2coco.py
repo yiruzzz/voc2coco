@@ -125,7 +125,7 @@ if __name__ == '__main__':
     xml_list = np.sort(xml_list)
     np.random.seed(100)
     np.random.shuffle(xml_list)
-    xml_list = xml_list[:2600] # 选择前2600张图片
+    # xml_list = xml_list[:2600] # 选择前2600张图片
 
     train_num = int(len(xml_list)*train_ratio)
     train_val_num = int(len(xml_list)*train_val_ratio)
@@ -133,7 +133,7 @@ if __name__ == '__main__':
 
     xml_list_train = xml_list[:train_num]
     xml_list_val = xml_list[train_num:train_val_num]
-    xml_list_test = xml_list[test_num:]
+    xml_list_test = xml_list[-test_num:]
     
     if os.path.exists(xml_folder + "/Anns"):
         shutil.rmtree(xml_folder + "/Anns")
